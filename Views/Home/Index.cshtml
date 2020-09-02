@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razor Fun</title>
+</head>
+<body>
+    <h1>Here are some delicious foods!</h1>
+    @{
+        var foods=new List<string>{"Pizza", "Cabbage", "Hot Dog", "Sandwhich", "Bagel and Lox"};
+            foreach(var food in foods)
+            {
+                
+                    if(food.Substring(0,1)=="c"||food.Substring(0,1)=="C")
+                    {
+                <div>
+                    <p style="color: red;">@food</p>
+                </div>
+
+                    }
+                    else
+                    {
+                        <div>
+                    <p>@food</p>
+
+                        </div>
+                    }
+            }
+    }
+</body>
+</html>
